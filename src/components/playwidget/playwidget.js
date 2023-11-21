@@ -9,7 +9,7 @@ const Playwidget = () => {
 
     return (
         
-            <Link to='/cart' className='CartWidget' style={{ display:totalQuantity > 0? 'block' : 'none'}}>
+            <Link to='/playlist' className='PlayWidget' style={{ display:totalQuantity > 0? 'block' : 'none'}}>
             🎵
             {totalQuantity}
             </Link>

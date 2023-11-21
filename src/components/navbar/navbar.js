@@ -4,13 +4,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './navbar.css'
 import Playwidget from '../playwidget/playwidget';
-import { NavLink } from 'react-router-dom';
+import { NavLink , Link} from 'react-router-dom';
 
 const Navbarr = () => {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container>
-            <Navbar.Brand href="#home" className="título" >Músik</Navbar.Brand>
+            <Navbar.Brand href="#home" className="título" ><Link to='/'>
+                <h3>Músik</h3>
+            </Link></Navbar.Brand>
            
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

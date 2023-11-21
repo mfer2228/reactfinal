@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import {getProducts, getProductsByCategory} from '../../asyncMock'
 import ItemList from '../SongList/SongList'
 import { useParams } from 'react-router-dom'
+import { Row } from 'react-bootstrap'
 
 // esta funcion se encarga de que las cards aparezcan en el sitio
 
@@ -25,8 +26,11 @@ const SongListContainer = ( {epale} ) => {
     return (
     <div>
         <h3> {epale} </h3>
-        <ItemList products={products}/>
-
+        <Row xs={1} md={2} className="g-4">
+        <div style={{width:'200px', margin:'20px'}}>
+          <ItemList products={products}/>
+        </div>
+        </Row>
     </div>
     )  
 }

@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import {  Card, CardBody, CardFooter, CardTitle} from "react-bootstrap";
 import SongCount from "../SongCount/SongCount";
 import { Link } from "react-router-dom";
+import { PlayContext } from "../../context/PlayContext";
 
 // este componente se encarga de la info más detallada de las canciones 
 
@@ -9,9 +10,17 @@ import { Link } from "react-router-dom";
 const DetailedSongCard = ({ id, nombre, artista, album, frase, categoria, año, duracion}) => {
    
   const [quantityAdded, setQuantityAdded] = useState(0)
+
+  const {addItem} = useContext(PlayContext)
   
   const handleOnAdd = (cantidad) => {
     setQuantityAdded(cantidad)
+
+    const item = {
+      id, nombre, duracion
+    }
+
+    addItem(item, cantidad)
   }
   
   return (

@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { PlayContext} from '../../context/PlayContext'
-import { PlayItem} from '../PlayItem/PlayItem'
+import { PlayContext } from "../../context/PlayContext";
+import PlayItem from "../PlayItem/PlayItem";
 import { Link } from "react-router-dom";
 
 const Playlist = () => {
@@ -24,3 +24,5 @@ const Playlist = () => {
         </div>
     )
 }
+
+export default Playlist

@@ -15,7 +15,7 @@ const Item = ({id, nombre, artista, duración }) => {
         </Card.Body>
         <Card.Footer>
         <Button variant="primary">
-          <Link to={`/item/${id}`} className='Option container'>Ver info</Link>
+          <Link to={`/item/${id}`} className='Option container' style={{color:'white', textDecoration:'none' }}>Ver info</Link>
           </Button>
         </Card.Footer>
       </Card>
